@@ -14,7 +14,13 @@ int sc_main (int argc, char* argv[]) {
     counter.enable(enable);
     counter.counter_out(counter_out);
 
+ 
+
   sc_start(1);
+  cout << "enable = " << enable.read() << endl;
+  enable = true;
+  //enable = 1;
+  cout << "enable = " << enable.read() << endl;
 
   // Open VCD file
   sc_trace_file *wf = sc_create_vcd_trace_file("counter");
